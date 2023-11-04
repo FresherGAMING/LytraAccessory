@@ -42,4 +42,19 @@ Then inside the file, you need to insert a few things:
    ```yaml
    hp-multiplier: 1
    ```
+
+# Commands
+| Command            | Usage | Description
+| ------------------ | ----- | ---------- |
+| /la                |
+| /la get            |
+| /la give           |
+| /la info           |
+| /la remove         |
+| /la view           |
+| /la slots view     |
+| /la slots add      |
+| /la slots remove   |
+| /la slots set      |
+
    
