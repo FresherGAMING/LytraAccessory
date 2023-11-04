@@ -1,0 +1,20 @@
+
+## WELCOME TO CONFIG ##
+
+# Register your accessory here ! #
+# Example > loaded-accessory: ["acc1.yml", "acc2.yml", "acc3.yml"] #
+loaded-accessory: ["examples.yml"]
+
+# Still adding an accessory to a player if their inventory is full (the item might be dropped) #
+add-item-while-full: false
+
+# The default accessory slot for player
+default-acc-slot: 4
+
+# If true, then player can use the same accessory twice or more
+# If false, then player can only use the same accessory once
+use-same-accessory: true
+
+# Settings for the default health point of player
+# 10 hearts = 20 health point
+default-health: 20

@@ -1,0 +1,37 @@
+## EXAMPLE OF ACCESSORY FORMAT ##
+
+# ID of your accessory [REQUIRED]
+# The ID will be used to get the accessory with commands
+# The Accessory ID needs to be a string, can't be an integer
+id: "example"
+
+# Item ID of your accessory [REQUIRED]
+# It will determine your accessory texture
+# Supports Vanilla Items and CustomItemLoader
+item-id: "stick"
+
+# The display name of your accessory [OPTIONAL]
+# It can be a string or an integer  
+custom-name: "§rExample"
+
+# The lore of your accessory [OPTIONAL]
+# It needs to be an array
+lore: ["Example Lore 1", "Example Lore 2"]
+
+# Now the settings of accessory that can affect the player stats #
+
+# Accessory Damage Stats [OPTIONAL]
+# Add % on the end to make the original damage sum up with the percent of original damage
+# If it doesn't have %, then it will be multiplied by 100%
+# For example: 1 => 100%, 2 => 200%, etc
+# If you want to reduce the damage, you can set it as negative
+# This will be the damage that will given by the player that used this accessory
+damage-multiplier: 25%
+
+# Accessory Health Stats [OPTIONAL]
+# Add % on the end to make the original hp sum up with the percent of original hp
+# If it doesn't have %, then it will be multiplied by 100%
+# For example: 1 => 100%, 2 => 200%, etc
+# If you want to reduce the hp, you can set it as negative
+# This will be the hp of the player that used this accessory
+hp-multiplier: 1

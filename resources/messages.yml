@@ -1,0 +1,11 @@
+# Respond Messages #
+no-perm: "§cYou don't have permission to use this command"
+out-of-slots: "§cYou are out of accessory slots, try removing one"
+use-same-accessory: "§cYou can't use the same accessory"
+inv-full: "§cYour inventory is full"
+remove-accessory: "§aSuccessfully removed {acc-name} §afrom your accessory inventory"
+
+# Accessory Form #
+form-title: "§eAccessory Inventory"
+form-description: "§bSlot: {slot-used}/{slot-amount}"
+form-button: "§a{accessory}\n§8Tap to remove the accessory"

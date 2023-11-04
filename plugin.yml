@@ -1,0 +1,11 @@
+name: LytraAccessory
+src-namespace-prefix: LytraAccessory
+main: LytraAccessory\LytraAccessory
+api: 5.0.0
+version: 1.0.0
+author: FresherGAMING
+permissions:
+ lytraaccessory.command.use:
+  default: true
+ lytraaccessory.command.admin:
+  default: op
