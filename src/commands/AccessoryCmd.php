@@ -216,7 +216,6 @@ class AccessoryCmd extends Command{
         $sadd = $player->hasPermission("lytraaccessory.command.admin.slots.add");
         $sremove = $player->hasPermission("lytraaccessory.command.admin.slots.remove");
         $sset = $player->hasPermission("lytraaccessory.command.admin.slots.set");
-        var_dump($admin);
         if($admin || $get || $give || $info || $remove || $view || $sview || $sadd || $sremove || $sset){
             return "permitted";
         }
