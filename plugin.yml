@@ -9,3 +9,21 @@ permissions:
   default: true
  lytraaccessory.command.admin:
   default: op
+ lytraaccessory.command.admin.get:
+  default: op
+ lytraaccessory.command.admin.give:
+  default: op
+ lytraaccessory.command.admin.info:
+  default: op
+ lytraaccessory.command.admin.remove:
+  default: op
+ lytraaccessory.command.admin.view:
+  default: op
+ lytraaccessory.command.admin.slots.view:
+  default: op
+ lytraaccessory.command.admin.slots.add:
+  default: op
+ lytraaccessory.command.admin.slots.remove:
+  default: op
+ lytraaccessory.command.admin.slots.set:
+  default: op
