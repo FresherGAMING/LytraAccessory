@@ -58,6 +58,8 @@ Then inside the file, you need to insert a few things:
 | /la slots set      | Set a spesific amount of slots on accessory inventory                | /la slots set [string:player] [int:amount]           |
 
 # Permissions
+You can use `lytraaccessory.command.admin` permission to give all the lytra accessory commands permissions
+
 | Command            | Permissions                                  | Default |
 | ------------------ | -------------------------------------------- | ------- |
 | /la                | lytraaccessory.command.use                   | True    |
@@ -72,4 +74,28 @@ Then inside the file, you need to insert a few things:
 | /la slots set      | lytraaccessory.command.admin.slots.set       | OP      |
 
 # For Developers
+Importing the LytraAccessory main file
+```php
+use LytraAccessory\LytraAccessory;
+```
+If you want to get the registered accessory
+```php
+$id = //your accessory id
+$amount = //the amount of the accessory do you want to get
+LytraAccessory::getInstance()->getAccessory($id, $amount);
+```
 
+If you want to give an accessory to a player
+```php
+$player = //needs to be a player type not a string
+$id = //your accessory id
+$amount = //the amount of the accessory do you want to give to the player
+LytraAccessory::getInstance()->giveAccessory($player, $id, $amount);
+```
+
+If you want to add an accessory to a player (simply make the player used an accessory)
+```php
+$player = //needs to be a player type not a string
+$id = //your accessory id
+LytraAccessory::getInstance()->addAccessory($player, $id);
+```
