@@ -44,17 +44,17 @@ Then inside the file, you need to insert a few things:
    ```
 
 # Commands
-| Command            | Usage | Description
-| ------------------ | ----- | ---------- |
-| /la                |
-| /la get            |
-| /la give           |
-| /la info           |
-| /la remove         |
-| /la view           |
-| /la slots view     |
-| /la slots add      |
-| /la slots remove   |
-| /la slots set      |
+| Command            | Description                                                          | Usage
+| ------------------ | -------------------------------------------------------------------- | ---------- |
+| /la                | View your accessory inventory                                        |
+| /la get            | Get an accessory                                                     |
+| /la give           | Give an accessory to another player                                  |
+| /la info           | Get an information about a spesific accessory                        |
+| /la remove         | Remove an equipped accessory from player                             |
+| /la view           | View an accessory inventory of another player                        |
+| /la slots view     | Display information about total slots and empty slots of player      |
+| /la slots add      | Add a spesific amount of slots on accessory inventory                |
+| /la slots remove   | Remove a spesific amount of slots on accessory inventory             |
+| /la slots set      | Set amount of slots on accessory inventory                           |
 
    
