@@ -21,9 +21,8 @@ class AccessoryCmd extends Command{
 
     public function execute(CommandSender $sender, string $label, array $args){
         $main = $this->la;
-        $consoleusage = "§cUsage: \n/la give [string:player] [string:id] [int:amount]\n/la info [string:id]";
         if(!$sender instanceof Player && count($args) < 2){
-            $sender->sendMessage($consoleusage);
+            $sender->sendMessage($this->getUsage());
             return;
         }
         if(($this->checkPerm($sender) === "noperm" && $sender instanceof Player) || ($sender instanceof Player && count($args) === 0)){
@@ -47,7 +46,7 @@ class AccessoryCmd extends Command{
         if(count($args) >= 2){
             if($args[0] === "get"){
                 if(!$admin && !$get) return $sender->sendMessage("§c[LYTRA ACCESSORY] You don't have permission to use this command");
-                if(!$sender instanceof Player) return $sender->sendMessage($consoleusage);
+                if(!$sender instanceof Player) return $sender->sendMessage("§cConsole can't use this command");
                 if($main->getAccessory($args[1]) === "notexist"){
                     $sender->sendMessage("§c[LYTRA ACCESSORY] Accessory not found!");
                     return;
@@ -126,10 +125,12 @@ class AccessoryCmd extends Command{
                     $sender->sendMessage("§c[LYTRA ACCESSORY] Accessory not found!");
                     return;
                 }
+                if($main->checkForAcc($player, $args[2]) === "noacc") return $sender->sendMessage("§c[LYTRA ACCESSORY] (" . $player->getName() . ") doesn't use accessory with id: " . $args[2]);
                 $main->removeAccessory($player, $args[2]);
                 $sender->sendMessage("§a[LYTRA ACCESSORY] Successfully removed an accessory from (" . $player->getName() . ") with id: " . $args[2]);
                 return;
             } elseif($args[0] === "view"){
+                if(!$sender instanceof Player) return $sender->sendMessage("§cConsole can't use this command");
                 if(!$admin && !$view) return $sender->sendMessage("§c[LYTRA ACCESSORY] You don't have permission to use this command");
                 $player = $main->getServer()->getPlayerExact($args[1]);
                 if((!$player instanceof Player) || (!$player->isOnline())){
@@ -150,7 +151,7 @@ class AccessoryCmd extends Command{
                         $sender->sendMessage("§c[LYTRA ACCESSORY] Player not found!");
                         return;
                     }
-                    $sender->sendMessage("§a[LYTRA ACCESSORY] " . $player->getName() . " has " . $main->getSlots($player) . " slots and " . $main->getAvailableSlots($player) . " empty slots");
+                    $sender->sendMessage("§a[LYTRA ACCESSORY] " . $player->getName() . " has " . $main->getSlots($player) - $main->getAvailableSlots($player) . " used slots and " . $main->getAvailableSlots($player) . " empty slots");
                     return;
                 } elseif($args[1] === "add" || $args[1] === "remove" || $args[1] === "set"){
                     if(count($args) < 4){
@@ -204,7 +205,7 @@ class AccessoryCmd extends Command{
         }
     }
 
-    public function checkPerm(Player $player){
+    public function checkPerm($player){
         $admin = $player->hasPermission("lytraaccessory.command.admin");
         $get = $player->hasPermission("lytraaccessory.command.admin.get");
         $give = $player->hasPermission("lytraaccessory.command.admin.give");
@@ -215,6 +216,7 @@ class AccessoryCmd extends Command{
         $sadd = $player->hasPermission("lytraaccessory.command.admin.slots.add");
         $sremove = $player->hasPermission("lytraaccessory.command.admin.slots.remove");
         $sset = $player->hasPermission("lytraaccessory.command.admin.slots.set");
+        var_dump($admin);
         if($admin || $get || $give || $info || $remove || $view || $sview || $sadd || $sremove || $sset){
             return "permitted";
         }

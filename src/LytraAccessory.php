@@ -98,6 +98,14 @@ class LytraAccessory extends PluginBase {
         return "ok";    
     }
 
+    public function checkForAcc(Player $player, string $id){
+        $data = $this->getData($player->getName());
+        $acc = array_search($id, $data);
+        if($acc === false){
+            return "noacc";
+        }
+    }
+
     public function giveAccessory(Player $player, $id, $count = 1){
         if($this->getAccessory($id) === "notexist"){
             return null;
@@ -155,6 +163,9 @@ class LytraAccessory extends PluginBase {
     public function removeAccessory(Player $player, $id){
         $data = $this->getData($player->getName());
         $acc = array_search($id, $data);
+        if($acc === false){
+            return "noacc";
+        }
         unset($data[$acc]);
         $newdata = array_values($data);
         $datacfg = $this->data();

@@ -6,7 +6,6 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerItemUseEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
-use pocketmine\utils\Config;
 
 class EventListener implements Listener {
 
