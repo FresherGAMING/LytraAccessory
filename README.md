@@ -99,3 +99,28 @@ $player = //needs to be a player type not a string
 $id = //your accessory id
 LytraAccessory::getInstance()->addAccessory($player, $id);
 ```
+
+If you want to remove an accessory from a player (simply make the player take of an accessory)
+```php
+$player = //needs to be a player type not a string
+$id = //your accessory id
+LytraAccessory::getInstance()->removeAccessory($player, $id);
+```
+
+If you want to get the number of players accessory slots
+```php
+$player = //needs to be a player type not a string
+LytraAccessory::getInstance()->getSlots($player);
+```
+
+If you want to get the number of players empty accessory slots
+```php
+$player = //needs to be a player type not a string
+LytraAccessory::getInstance()->getAvailableSlots($player);
+```
+
+If you want to set the number of players accessory slots
+```php
+$player = //needs to be a player type not a string
+LytraAccessory::getInstance()->setSlots($player);
+```
