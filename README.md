@@ -57,4 +57,19 @@ Then inside the file, you need to insert a few things:
 | /la slots remove   | Remove a spesific amount of slots on accessory inventory             | /la slots remove [string:player] [int:amount]        |
 | /la slots set      | Set a spesific amount of slots on accessory inventory                | /la slots set [string:player] [int:amount]           |
 
-   
+# Permissions
+| Command            | Permissions                                  | Default |
+| ------------------ | -------------------------------------------- | ------- |
+| /la                | lytraaccessory.command.use                   | True    |
+| /la get            | lytraaccessory.command.admin.get             | OP      |
+| /la give           | lytraaccessory.command.admin.give            | OP      |
+| /la info           | lytraaccessory.command.admin.info            | OP      |
+| /la remove         | lytraaccessory.command.admin.remove          | OP      |
+| /la view           | lytraaccessory.command.admin.view            | OP      |
+| /la slots view     | lytraaccessory.command.admin.slots.view      | OP      |
+| /la slots add      | lytraaccessory.command.admin.slots.add       | OP      |
+| /la slots remove   | lytraaccessory.command.admin.slots.remove    | OP      |
+| /la slots set      | lytraaccessory.command.admin.slots.set       | OP      |
+
+# For Developers
+
