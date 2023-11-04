@@ -3,7 +3,7 @@
 namespace LytraAccessory;
 
 use LytraAccessory\commands\AccessoryCmd;
-use LytraAccessory\libs\jojoe77777\FormAPI\SimpleForm;
+use jojoe77777\FormAPI\SimpleForm;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
