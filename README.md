@@ -58,7 +58,7 @@ Then inside the file, you need to insert a few things:
 | /la slots set      | Set a spesific amount of slots on accessory inventory                | /la slots set [string:player] [int:amount]           |
 
 # Permissions
-You can use `lytraaccessory.command.admin` permission to give all the lytra accessory commands permissions
+You can use `lytraaccessory.command.admin` permission to give players all the lytra accessory commands permissions
 
 | Command            | Permissions                                  | Default |
 | ------------------ | -------------------------------------------- | ------- |
