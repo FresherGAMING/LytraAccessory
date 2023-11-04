@@ -1,5 +1,5 @@
 # LytraAccessory
-LytraAccessory is a Pocketmine MP Plugin that will add accessory features on your server
+LytraAccessory is a Pocketmine MP Plugin that will add an accessory features on your server
 
 # Register The Accessory
 To register your accessory, you need to make a new yaml file on the plugin_data folder
