@@ -44,17 +44,17 @@ Then inside the file, you need to insert a few things:
    ```
 
 # Commands
-| Command            | Description                                                          | Usage                                                | Default Permissios |
-| ------------------ | -------------------------------------------------------------------- | ---------------------------------------------------- | ------------------ |
-| /la                | View your accessory inventory                                        | /la                                                  | True               |
-| /la get            | Get an accessory                                                     | /la get [string:id] [int:amount]                     | OP                 |
-| /la give           | Give an accessory to another player                                  | /la give [string:player] [string:id] [int:amount]    | OP                 |
-| /la info           | Get an information about a spesific accessory                        | /la info [string:id]                                 | OP                 |
-| /la remove         | Remove an equipped accessory from player                             | /la remove [string:player] [string:id]               | OP                 |
-| /la view           | View an accessory inventory of another player                        | /la view [string:player]                             | OP                 |
-| /la slots view     | Display information about total slots and empty slots of player      | /la slots view [string:player]                       | OP                 |
-| /la slots add      | Add a spesific amount of slots on accessory inventory                | /la slots add [string:player] [int:amount]           | OP                 |
-| /la slots remove   | Remove a spesific amount of slots on accessory inventory             | /la slots remove [string:player] [int:amount]        | OP                 |
-| /la slots set      | Set a spesific amount of slots on accessory inventory                | /la slots set [string:player] [int:amount]           | OP                 |
+| Command            | Description                                                          | Usage                                                |
+| ------------------ | -------------------------------------------------------------------- | ---------------------------------------------------- |
+| /la                | View your accessory inventory                                        | /la                                                  |
+| /la get            | Get an accessory                                                     | /la get [string:id] [int:amount]                     |
+| /la give           | Give an accessory to another player                                  | /la give [string:player] [string:id] [int:amount]    |
+| /la info           | Get an information about a spesific accessory                        | /la info [string:id]                                 |
+| /la remove         | Remove an equipped accessory from player                             | /la remove [string:player] [string:id]               |
+| /la view           | View an accessory inventory of another player                        | /la view [string:player]                             |
+| /la slots view     | Display information about total slots and empty slots of player      | /la slots view [string:player]                       |
+| /la slots add      | Add a spesific amount of slots on accessory inventory                | /la slots add [string:player] [int:amount]           |
+| /la slots remove   | Remove a spesific amount of slots on accessory inventory             | /la slots remove [string:player] [int:amount]        |
+| /la slots set      | Set a spesific amount of slots on accessory inventory                | /la slots set [string:player] [int:amount]           |
 
    
