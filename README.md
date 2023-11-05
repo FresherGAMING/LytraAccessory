@@ -80,7 +80,7 @@ You can use `lytraaccessory.command.admin` permission to give players all the ly
 # For Developers
 Importing the LytraAccessory main file
 ```php
-use LytraAccessory\LytraAccessory;
+use FresherGAMING\LytraAccessory\LytraAccessory;
 ```
 If you want to get the registered accessory
 ```php
