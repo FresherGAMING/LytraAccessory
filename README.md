@@ -42,6 +42,10 @@ Then inside the file, you need to insert a few things:
    ```yaml
    hp-multiplier: 1
    ```
+After that, you need to go to `config.yml` file, then add your file name to the loaded-accessory
+```yaml
+loaded-accessory: ["coolaccessory.yml"]
+```
 
 # Commands
 | Command            | Description                                                          | Usage                                                |
