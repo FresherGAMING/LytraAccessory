@@ -28,7 +28,7 @@ class LytraAccessory extends PluginBase {
             }
         }
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        $this->getServer()->getCommandMap()->register("accessory", new AccessoryCmd($this));
+        $this->getServer()->getCommandMap()->register("LytraAccessory", new AccessoryCmd($this));
     }
 
     public static function getInstance(){

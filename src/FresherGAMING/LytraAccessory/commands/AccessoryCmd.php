@@ -9,18 +9,24 @@ use pocketmine\player\Player;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 
-class AccessoryCmd extends Command{
+use pocketmine\plugin\PluginOwned;
+use pocketmine\plugin\PluginOwnedTrait;
 
-    public function __construct(private LytraAccessory $la){
+class AccessoryCmd extends Command implements PluginOwned{
+
+    use PluginOwnedTrait;
+
+    public function __construct(LytraAccessory $la){
         $this->setLabel("accessory");
         $this->setDescription("Simply adding an accessory to your server");
         $this->setAliases(["acc", "lytraaccessory", "la"]);
         $this->setPermission("lytraaccessory.command.use");
         $this->setUsage("§c[LYTRA ACCESSORY] Usage: \n/la get [string:id] [int:amount]\n/la give [string:player] [string:id] [int:amount]\n/la info [string:id]\n/la remove [string:player] [string:id]\n/la view [string:player]\n/la slots view [string:player]\n/la slots [add|remove|set] [string:player] [int:amount]");
+        $this->owningPlugin = $la;
     }
 
     public function execute(CommandSender $sender, string $label, array $args){
-        $main = $this->la;
+        $main = $this->getOwningPlugin();
         if(!$sender instanceof Player && count($args) < 2){
             $sender->sendMessage($this->getUsage());
             return;
